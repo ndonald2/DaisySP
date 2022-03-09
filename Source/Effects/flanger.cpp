@@ -32,7 +32,7 @@ float Flanger::Process(float in)
 
 void Flanger::SetFeedback(float feedback)
 {
-    feedback_ = fclamp(feedback, 0.f, 1.f);
+    feedback_ = fclamp(feedback, -1.f, 1.f);
     feedback_ *= .97f;
 }
 

@@ -10,7 +10,7 @@
 
 namespace daisysp
 {
-/** @brief Flanging Audio Effect 
+/** @brief Flanging Audio Effect
  *
  * Generates a modulating phase shifted copy of a signal, and recombines
  * with the original to create a 'flanging' sound effect.
@@ -29,7 +29,7 @@ class Flanger
     float Process(float in);
 
     /** How much of the signal to feedback into the delay line.
-        \param feedback Works 0-1.
+        \param feedback Works -1 to 1.
     */
     void SetFeedback(float feedback);
 
@@ -43,7 +43,7 @@ class Flanger
     */
     void SetLfoFreq(float freq);
 
-    /** Set the internal delay rate. 
+    /** Set the internal delay rate.
         \param delay Tuned for 0-1. Maps to .1 to 7 ms.
     */
     void SetDelay(float delay);
